@@ -1,0 +1,29 @@
+"use strict";
+import Vue from 'vue';
+import Vuex from 'vuex';
+Vue.use(Vuex);
+const store={
+  state:{
+    'user_name':'王桥',
+    'depart_name':'研发一部',
+    'position':'Java工程师',
+    iconObj:{
+      tableId1:'ios-world-outline',
+      tableId2:'ios-search-strong',
+    },
+    nameObj:{
+      tableId1:'活动',
+      tableId2:'线索',
+    },
+    user:{},
+  },
+  mutations:{
+    login(state,obj){
+        Object.assign(state.user,obj);
+    },
+    logout(state){
+      Object.assign(state.user,{});
+    }
+  }
+};
+export default store;
